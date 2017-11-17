@@ -9,20 +9,20 @@ const homecomix_db_path = require('path').join(
 const setup = {
 	folder() {
 		if (!require('fs').existsSync(homecomix_db_path)) {
-			require('mkdirp')(homecomix_db_path, (err) => {
+			require('mkdirp')(homecomix_db_path, err => {
 				if (err) {
-					console.log(`${homecomix_db}creating HomeComix database folder at (${homecomix_db_path}) [${failure}]`);
+					console.log(`${homecomix_db}Creating HomeComix database folder at (${homecomix_db_path}) [${failure}]`);
 					throw(err)
 				} else {
-					console.log(`${homecomix_db}creating HomeComix database folder at (${homecomix_db_path}) [${success}]`);
+					console.log(`${homecomix_db}Creating HomeComix database folder at (${homecomix_db_path}) [${success}]`);
 				}
 			});
 		} else {
-			console.log(`${homecomix_db}found HomeComix database folder at (${homecomix_db_path}) [${success}]`);
+			console.log(`${homecomix_db}Found HomeComix database folder at (${homecomix_db_path}) [${success}]`);
 		}
 	},
 	mongod() {
-		require('shelljs').exec(`mongod --dbpath ${homecomix_db_path}`, (err) => {
+		require('shelljs').exec(`mongod --dbpath ${homecomix_db_path}`, err => {
 			if (err) {
 				console.log(`${homecomix_db}Starting mongod service [${failure}]`);
 				throw(err);
