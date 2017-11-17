@@ -1,0 +1,25 @@
+{
+  "name": "homecomix-db",
+  "version": "1.0.0",
+  "description": "This folder contains the MongoDB which powers the HomeComix app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TommyStarK/HomeComix-DB.git"
+  },
+  "author": "TommyStarK (Thomas Milox)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TommyStarK/HomeComix-DB/issues"
+  },
+  "homepage": "https://github.com/TommyStarK/HomeComix-DB#readme",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "mongodb": "^2.2.33",
+    "shelljs": "^0.7.8"
+  }
+}
