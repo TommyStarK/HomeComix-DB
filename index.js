@@ -32,11 +32,12 @@ const setup = {
 	},
 
    mongod () {
-		try {
-			require('shelljs').exec(`mongod --dbpath ${homecomixDBPath}`)
-		} catch (err) {
-			console.log(`${homecomixDB}Starting mongod service [${failure}]`)
-		}
+		require('shelljs').exec(`mongod --dbpath ${homecomixDBPath}` , err => {
+			if (err) {
+				console.log(`${homecomixDB}Starting mongod service [${failure}]`)
+				throw (err)
+			}
+		})
 	}
 }
 
