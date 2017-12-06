@@ -4,10 +4,10 @@ const homecomixDB = '[\x1b[35mHomeComix-DB\x1b[0m] '
 const homecomixDBPath = require('path').join(require('os').homedir(), '/.homecomix/db')
 
 const setup = {
-  async database () {
+  database () {
     if (!require('fs').existsSync(homecomixDBPath)) {
       try {
-        await require('mkdirp')(homecomixDBPath)
+        require('mkdirp')(homecomixDBPath)
         console.log(`${homecomixDB}Creating HomeComix database folder at (${homecomixDBPath}) [${success}]`)
       } catch (err) {
         console.log(`${homecomixDB}Creating HomeComix database folder at (${homecomixDBPath}) [${failure}]`)
